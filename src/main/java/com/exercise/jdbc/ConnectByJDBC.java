@@ -23,7 +23,7 @@ public class ConnectByJDBC {
             while (rs.next()) {
                 System.out.println(rs.getString(1));
             }
-            // 6. 关闭
+            // 6. 关闭连接
             rs.close();
             con.close();
         } catch (Exception e) {
