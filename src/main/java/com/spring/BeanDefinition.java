@@ -1,5 +1,6 @@
 package com.spring;
 
+@SuppressWarnings("all")
 public class BeanDefinition {
     private String scope;
     private Class beanClass;

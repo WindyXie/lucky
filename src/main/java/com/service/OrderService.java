@@ -6,6 +6,7 @@ import com.spring.Scope;
 
 @Component("orderService")
 // @Scope("prototype")
+@SuppressWarnings("all")
 public class OrderService {
     @Autowired
     private UserService userService;

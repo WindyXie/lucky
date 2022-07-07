@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.service.UserService;
 
+@SuppressWarnings("all")
 public class LubanApplicationContext {
 
     private ConcurrentHashMap<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
