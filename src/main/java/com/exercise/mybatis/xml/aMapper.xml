@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exercise.mybatis.dao.AMapper">
+    <select id="listName" resultType="com.exercise.mybatis.dao.A">
+        select row1 dif1,row2 dif2,row3 dif3 from a where row1=#{rowTestNoUse}
+    </select>
+</mapper>
