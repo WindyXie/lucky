@@ -2,7 +2,12 @@ package com.exercise.ioc.dao;
 
 import org.springframework.stereotype.Repository;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 @Repository
+@Data
+@AllArgsConstructor
 public class UserDaoImpl {
     public User getById(int userId) {
         if (9527 == userId) {

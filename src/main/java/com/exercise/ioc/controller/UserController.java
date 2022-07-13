@@ -8,7 +8,12 @@ import org.springframework.stereotype.Controller;
 
 import com.exercise.ioc.service.UserServiceImpl;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 @Controller("userCon")
+@Data
+@AllArgsConstructor
 public class UserController {
     @Autowired
     private UserServiceImpl userServiceImpl;

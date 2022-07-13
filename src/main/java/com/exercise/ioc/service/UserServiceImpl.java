@@ -6,7 +6,12 @@ import org.springframework.stereotype.Service;
 import com.exercise.ioc.dao.User;
 import com.exercise.ioc.dao.UserDaoImpl;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 @Service
+@Data
+@AllArgsConstructor
 public class UserServiceImpl {
     @Autowired
     private UserDaoImpl userDaoImpl;

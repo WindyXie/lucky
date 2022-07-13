@@ -5,7 +5,18 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
+<!--    构造器注入-->
+    <bean id="userCon" class="com.exercise.ioc.controller.UserController">
+        <constructor-arg name="userServiceImpl" ref="userService"></constructor-arg>
+        <constructor-arg name="userId" value="9527"></constructor-arg>
+    </bean>
+    <bean id="userService" class="com.exercise.ioc.service.UserServiceImpl">
+        <constructor-arg name="userDaoImpl" ref="userDao"></constructor-arg>
+    </bean>
+    <bean id="userDao" class="com.exercise.ioc.dao.UserDaoImpl"></bean>
+
+
 <!--    注解注入、打开组建扫描-->
-    <context:component-scan base-package="com.exercise.ioc"></context:component-scan>
+    <!-- <context:component-scan base-package="com.exercise.ioc"></context:component-scan> -->
 
 </beans>
