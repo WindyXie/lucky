@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.exercise.mybatis.dao.A;
 import com.exercise.mybatis.dao.AMapper;
+import com.exercise.mybatis.dao.Dir;
+import com.exercise.mybatis.dao.dirMapper;
 
 import java.io.InputStream;
 import java.util.List;
@@ -38,8 +40,15 @@ public class SqlSessionFactoryUtil {
         }
     }
 
+    public static void application1(){
+        SqlSession sqlSession = getSqlSession();
+        dirMapper aMapper = sqlSession.getMapper(dirMapper.class);
+        List<Dir> aList = aMapper.selectDirTree();
+        System.out.println(aList);
+    }
+
     public static void main(String[] args) {
-        application();
+        application1();
     }
 }
 

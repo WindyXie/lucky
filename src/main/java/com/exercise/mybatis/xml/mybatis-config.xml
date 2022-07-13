@@ -17,5 +17,6 @@
     </environments>
     <mappers>
         <mapper resource="com/exercise/mybatis/xml/aMapper.xml"/>
+        <mapper resource="com/exercise/mybatis/xml/DirMapper.xml"/>
     </mappers>
 </configuration>
