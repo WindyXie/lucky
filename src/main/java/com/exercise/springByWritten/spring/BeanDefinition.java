@@ -1,4 +1,4 @@
-package com.springByWritten.spring;
+package com.exercise.springByWritten.spring;
 
 @SuppressWarnings("all")
 public class BeanDefinition {

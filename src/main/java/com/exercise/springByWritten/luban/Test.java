@@ -1,7 +1,7 @@
-package com.springByWritten.luban;
+package com.exercise.springByWritten.luban;
 
-import com.springByWritten.service.OrderService;
-import com.springByWritten.spring.LubanApplicationContext;
+import com.exercise.springByWritten.service.OrderService;
+import com.exercise.springByWritten.spring.LubanApplicationContext;
 
 public class Test {
     public static void main(String... args) {

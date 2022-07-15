@@ -1,4 +1,4 @@
-package com.springByWritten.spring;
+package com.exercise.springByWritten.spring;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.springByWritten.service.UserService;
+import com.exercise.springByWritten.service.UserService;
 
 @SuppressWarnings("all")
 public class LubanApplicationContext {
