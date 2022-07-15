@@ -8,10 +8,12 @@ import com.exercise.ioc.dao.UserDaoImpl;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Service
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserServiceImpl {
     @Autowired
     private UserDaoImpl userDaoImpl;

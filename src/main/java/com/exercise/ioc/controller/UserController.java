@@ -10,10 +10,12 @@ import com.exercise.ioc.service.UserServiceImpl;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Controller("userCon")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserController {
     @Autowired
     private UserServiceImpl userServiceImpl;
