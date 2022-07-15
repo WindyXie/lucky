@@ -1,8 +1,8 @@
-package com.service;
+package com.springByWritten.service;
 
-import com.spring.Autowired;
-import com.spring.Component;
-import com.spring.Scope;
+import com.springByWritten.spring.Autowired;
+import com.springByWritten.spring.Component;
+import com.springByWritten.spring.Scope;
 
 @Component("orderService")
 // @Scope("prototype")

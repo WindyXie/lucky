@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "com.springByWritten.luban.Test",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "name": "Launch UserController",
             "request": "launch",
             "mainClass": "com.exercise.ioc.controller.UserController",
