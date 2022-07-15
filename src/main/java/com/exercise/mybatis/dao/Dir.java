@@ -13,6 +13,6 @@ public class Dir {
     private Long id;
     private Long parentId;
     private String dirName;
-    private Long isAddDir;
+    private Integer isAddDir;
     private List<Dir> children;
 }

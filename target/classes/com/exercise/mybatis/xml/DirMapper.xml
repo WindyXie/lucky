@@ -7,7 +7,7 @@
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
         <result column="dir_name" jdbcType="VARCHAR" property="dirName"/>
-        <result column="isAddDir" jdbcType="BIGINT" property="isAddDir"/>
+        <result column="isAddDir" jdbcType="INTEGER" property="isAddDir"/>
         <collection property="children" ofType="com.exercise.mybatis.dao.Dir" select="selectDirTree2" column="{parent_id = id}"/>
     </resultMap>
     <select id="selectDirTree" resultMap="BaseResultTreeMap">
@@ -29,7 +29,7 @@
         select id, parent_id, dir_name, isAddDir
         from (
             select 
-            tmd.id as id, tmd.parent_id as parent_id, tmd.dir_name as dir_name, count(tmmdr.metric_id) as isAddDir
+            tmd.id as id, tmd.parent_id as parent_id, tmd.dir_name as dir_name, if(count(tmmdr.metric_id)>0,1,0) as isAddDir
             from tbl_metric_dir tmd left join tbl_metric_metric_dir_relation tmmdr on tmd.id=tmmdr.dir_id
             group by tmd.id
         ) t
