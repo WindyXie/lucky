@@ -43,7 +43,7 @@ public class SqlSessionFactoryUtil {
     public static void application1(){
         SqlSession sqlSession = getSqlSession();
         dirMapper aMapper = sqlSession.getMapper(dirMapper.class);
-        List<Dir> aList = aMapper.selectDirTree2();
+        List<Dir> aList = aMapper.selectDirTree2(0L);
         System.out.println(aList);
     }
 
