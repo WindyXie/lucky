@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.exercise.mybatis.dao.Dir;
 import com.exercise.mybatis.dao.dirMapper;
 
-@RestController //相当于@Controller + @ResponseBody
+@RestController //相当于@Controller + @ResponseBody，测试连通否
 // @RequestMapping(value = "/xx")
 public class ShowController {
     @Autowired
