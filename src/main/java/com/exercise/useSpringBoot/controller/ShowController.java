@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.exercise.mybatis.dao.Dir;
 import com.exercise.mybatis.dao.dirMapper;
+import com.exercise.useSpringBoot.config.ReadConfigFile;
 
 @RestController //相当于@Controller + @ResponseBody，测试连通否
 // @RequestMapping(value = "/xx")
 public class ShowController {
     @Autowired
     dirMapper dirMapper;
+
+    @Autowired
+    ReadConfigFile configFile;
 
     // @GetMapping("/get")
     @RequestMapping(value = "/get", method = RequestMethod.GET)
@@ -25,7 +29,7 @@ public class ShowController {
     }
 
     @GetMapping("/get1")
-    public String get1() {
-        return "1";
+    public Object get1() {
+        return configFile;
     }
 }
