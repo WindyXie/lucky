@@ -30,6 +30,6 @@ public class ShowController {
 
     @GetMapping("/get1")
     public Object get1() {
-        return configFile;
+        return configFile.getConfig();
     }
 }
