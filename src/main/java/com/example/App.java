@@ -5,29 +5,83 @@ package com.example;
  *
  */
 public class App {
-    public static void main(String[] args) {
-        // System.out.println("Hello World!".concat("windy"));
-        // System.out.println("Hello World!".concat("windy"));
-        // sayHello();
-        // int xieXieNi;
-        // xieXieNi = 3;
-
-        // System.out.println(xieXieNi);
-        // for (int i = 0; i < args.length; i++) {
-        //     for (int j = 0; j < args.length; j++) {
-        //         for (int j2 = 0; j2 < args.length; j2++) {
-        //             for (int k = 0; k < args.length; k++) {
-        //                 for (int k2 = 0; k2 < args.length; k2++) {
-
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-        System.out.println(111 / 1);
+    // App的field
+    private static int nextId = 1;
+    private String name;
+    private double salary;
+    private int id;
+    public App(String n, double s) {
+        name = n;
+        salary = s;
+        id = 0;
     }
+    public String getName() {
+        return name;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId() {
+        id = nextId;
+        nextId++;
+    }
+    public static int getNextId() {
+        return nextId;
+    }
+    public void raiseSalary(double byPercent) {
+        double raise = salary * byPercent / 100;
+        salary += raise;
+    }
+}
 
-    private static void sayHello() {
-        System.out.println("Hello World1!".concat("windy1"));
+class Test {
+    public static void main(String... args) {
+        /**
+         * Test 1: Methods can't modify numeric parameters
+         */
+        System.out.println("Testing ripleValue: ");
+        double percent = 10;
+        System.out.println("Before: percent = " + percent);
+        tripleValue(percent);
+        System.out.println("After: percent = " + percent);
+
+        /**
+         * Test 2: Methods cna change the state of object parameters
+         */
+        System.out.println("\nTesting tripleSalary:");
+        App harry = new App("Harry", 50000);
+        System.out.println("Before: salary=:" + harry.getSalary());
+        tripleSalary(harry);
+        System.out.println("After: salary=" + harry.getSalary());
+
+        /**
+         * Test 3: Methods can't attach new objects to object parameters
+         */
+        System.out.println("\nTesting swap:");
+        App a = new App("Alice", 70000);
+        App b = new App("Bob", 60000);
+        System.out.println("Before a=" + a.getName());
+        System.out.println("Before b=" + b.getName());
+        swap(a, b);
+        System.out.println("After: a=" + a.getName());
+        System.out.println("After: b=" + b.getName());
+    }
+    public static void tripleValue(double x) {
+        x = 3 * x;
+        System.out.println("End of method: x = " + x);
+    }
+    public static void tripleSalary(App x) {
+        x.raiseSalary(200);
+        System.out.println("End of method: salary=" + x.getSalary());
+    }
+    public static void swap(App x, App y) {
+        App temp = x;
+        x = y;
+        y = temp;
+        System.out.println("End of method: x=" + x.getName());
+        System.out.println("End of method: y=" + y.getName());
     }
 }
