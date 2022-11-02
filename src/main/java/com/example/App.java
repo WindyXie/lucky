@@ -31,6 +31,8 @@ public class App {
     public static int getNextId() {
         return nextId;
     }
+    // 方法签名： raiseSalary(double byPercent)
+    // 注意：返回类型不是方法签名的一部分
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
         salary += raise;
