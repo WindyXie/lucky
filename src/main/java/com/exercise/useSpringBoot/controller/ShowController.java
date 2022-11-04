@@ -28,6 +28,12 @@ public class ShowController {
         return dirMapper.sel();
     }
 
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
+    public String get2() {
+        System.out.println("111");
+        return "vvv";
+    }
+
     @GetMapping("/get1")
     public Object get1() {
         return configFile.getConfig();
