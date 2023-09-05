@@ -16,7 +16,7 @@ public class TimerTest {
         Timer timer = new Timer(1000, listener);
         timer.start();
 
-        // keep program running until the user selects "OK"
+        // keep program running until the user selects "OK" 测试改动
         JOptionPane.showMessageDialog(null, "Quit program?");
         System.exit(0);
     }
